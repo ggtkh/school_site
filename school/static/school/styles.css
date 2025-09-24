@@ -98,6 +98,7 @@ table  {
   .table-teachers th:nth-child(2), .table-teachers td:nth-child(2) { width: 15%; }
   .table-teachers th:nth-child(3), .table-teachers td:nth-child(3) { width: 40%; }
 
+
 caption {
     caption-side: top;
     font-size: 2em;

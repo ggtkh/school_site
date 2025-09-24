@@ -31,7 +31,7 @@
                 <td>
                 {% for form in forms %}
                     {% if form.classteacher_id == teacher.id %}
-                        {{ form.title }}
+                        <a href= {% url "single_form" form.id %} > {{ form.title }} </a>
                     {% endif %}
                 {% endfor %}
                 </td>

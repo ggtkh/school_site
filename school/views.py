@@ -20,6 +20,15 @@ def teacher(request):
 def student(request):
     teachers = ClassTeacher.objects.all()
     forms = Form.objects.all()
-    student = Student.objects.all()
+    # students_qty = 
     return render(request, 'student.html', {'teachers': teachers,
-                                            'forms': forms})
+                                            'forms': forms,
+                                            })
+
+def single_form(request, form_id):
+    form = Form.objects.get(id=form_id)
+    teacher = ClassTeacher.objects.get(id=form.classteacher_id)
+    students = Student.objects.filter(form_id=form.id)
+    return render(request, 'single_form.html', {'teacher': teacher,
+                                                'form': form,
+                                                'students':students})

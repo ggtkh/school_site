@@ -22,8 +22,8 @@
             {% for form in forms %}
             <tbody>
                 <tr>
-                <td> {{ form }} </td>
-                <td> {{form.students_qty}} </td>
+                <td> <a href={% url "single_form" form.id %}> {{ form }} </a> </td>
+                <td> {{ form.students_qty }} </td>
                 <td> 
                     {% for teacher in teachers  %}
                         {% if teacher.id == form.classteacher_id %}

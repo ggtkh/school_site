@@ -1,0 +1,24 @@
+{% extends "main_page.html" %}
+{% block  content%}
+    <div class="table classes">
+        <table class="single_form_table">
+            <caption> {{ form }} </caption>
+            <thead>
+            <tr>
+                <th colspan="3">Класний керівник: {{teacher}} </th>
+            </tr>
+                <th> ПІБ</th>
+                <th> Вік </th>
+                <th ></th>
+            </thead>
+            <tbody>
+                {% for student in students %}
+                <tr>
+                    <td>{{ student }}</td>
+                    <td>{{ student.age }}</td>
+                </tr> 
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock  %}
