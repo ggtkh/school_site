@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Шахтарський ліцей №2</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'school/styles.css' %}">
+    <meta charset="UTF-8">
+    <meta name="Автор" content="Костик)">
+    <meta name="Автор №2" content="Паша)">
+    <link rel="icon" type="image/x-icon" href="{% static 'school/icon.png' %}">
+</head>
+<body>
+    <aside>    
+        <section>
+            <a href={% url 'index' %}>На головну</a>
+            <a href={% url 'form' %}> Список класів</a>
+            <a href={% url 'teacher' %}> Список вчителів</a>
+            <h4>Автори: Костик) і Паша)</h4>
+        </section>
+    </aside>
+    <header>
+    <div class="ad"> 
+        <h6>Тут могла бути ваша реклама</h6> </div>
+    </header>
+    <div class="ad2">
+        <h4>І тут теж могла бути ваша реклама</h4>
+    </div>
+    <div class="ad3">
+        <h4>Тут теж могла бути ваша реклама</h4>
+    </div>
+    <div class="voda">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

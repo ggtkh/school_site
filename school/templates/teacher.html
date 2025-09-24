@@ -1,0 +1,45 @@
+{% extends 'main_page.html' %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Шахтарський ліцей №2</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="Автор" content="Костик)">
+    <meta name="Автор №2" content="Паша)">
+    <link rel="icon" href="icon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="table">
+        {% block content %}
+        <table class="teachers">
+            <caption>Список вчителів</caption>
+                <thead>
+                    <th>ПІБ </th>
+                    <th>Що викладає</th>
+                    <th>Класний керівник якого класу:</th>
+                </thead>
+            {% for teacher in teachers %}
+            <tbody>
+            <tr>
+                <td> {{ teacher }} </td>
+                <td> 
+                    {% for subject in teacher.subjects %}
+                        {{ subject }}
+                    {% endfor %}
+                </td>
+                <td>
+                {% for form in forms %}
+                    {% if form.classteacher_id == teacher.id %}
+                        {{ form.title }}
+                    {% endif %}
+                {% endfor %}
+                </td>
+            </tr> 
+            </tbody>
+            {% endfor %}
+        </table>
+        {% endblock %}
+    </div>
+</body>
+</html>
