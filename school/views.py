@@ -6,7 +6,7 @@ def index(request):
     teachers = ClassTeacher.objects.all()
     forms = Form.objects.all()
     student = Student.objects.all()
-    return render(request, 'main_page.html', {'teachers': teachers,
+    return render(request, 'info_main.html', {'teachers': teachers,
                                               'forms': forms})
 
 
