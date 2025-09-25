@@ -17,13 +17,14 @@ class Form(models.Model):
     classteacher = models.ForeignKey(ClassTeacher, on_delete=models.DO_NOTHING)
     title = models.CharField(max_length=4)
     created_at = models.DateTimeField(default=timezone.now)
+    
+    def __str__(self):
+        return self.title
+    
     @property
     def students_qty(self):
         return self.student_set.count()
 
-    def __str__(self):
-        return self.title
-    
 
 class Student(models.Model):
     form = models.ForeignKey(Form, on_delete=models.DO_NOTHING)  # , on_delete=models.CASCADE
