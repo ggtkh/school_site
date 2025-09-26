@@ -5,9 +5,8 @@ body {
   color: #fff;
   padding-left: 200px;
   padding-top: 60px;
-  background: url('fon2.png') center center no-repeat fixed;
-  background-size: auto 100%;
-  position: right;
+  background: url('fon.png') no-repeat;
+  background-size: cover;
 }
 a {
   color: #ffffff;
@@ -25,7 +24,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
- 
+  border-radius: 0 0 5px 5px;
 }
 .ad2 {
   background-color: #444;
@@ -39,7 +38,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  border-radius: 5px 5px 0 0;
 }
 .ad3 {
   background-color: #444;
@@ -52,7 +51,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  border-radius: 5px 5px 0 0;
 }
 section {
   width: 15%;
@@ -99,9 +98,6 @@ table  {
   .table-teachers th:nth-child(2), .table-teachers td:nth-child(2) { width: 15%; }
   .table-teachers th:nth-child(3), .table-teachers td:nth-child(3) { width: 40%; }
 
-  .single_form_table th:nth-child(1), .single_form_table td:nth-child(1) { width: 50%; }
-  .single_form_table th:nth-child(2), .single_form_table td:nth-child(2) { width: 50%; }
-  .single_form_table th:nth-child(3), .single_form_table td:nth-child(3) { width: 0%; }
 
 caption {
     caption-side: top;
@@ -111,6 +107,9 @@ caption {
 .voda {
     width: 60%;
     height: calc(100% - 120px);
-    margin: 15%;
+    z-index: 1000;
+    margin: 10%;
+    background-repeat: no-repeat;
+    background-image: url('fon.png');
   }
   
